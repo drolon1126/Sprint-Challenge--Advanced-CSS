@@ -38,6 +38,14 @@
     transform: translateX(0);
   }
 }
+@keyframes shineText {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -201,7 +209,6 @@ p {
   margin: 0 auto;
 }
 nav {
-  text-align: center;
   background: #F6F6F6;
   color: #454A59;
   border: 1px solid #F1F1F1;
@@ -209,11 +216,29 @@ nav {
   top: 0;
   width: 100%;
   opacity: 0.9;
+  z-index: 1;
 }
 nav .logo {
+  margin: 0;
+  padding: 0;
   font-size: 4em;
   margin-top: 1.2rem;
   margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav .logo h1 {
+  position: relative;
+  overflow: hidden;
+  color: #F6F6F6;
+  background: linear-gradient(80deg, #F6F6F6, #454A59, #F6F6F6);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shineText 2s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
 nav .links {
   display: flex;
