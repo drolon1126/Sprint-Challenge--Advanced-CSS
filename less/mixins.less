@@ -16,3 +16,20 @@
     text-align: center;
     border-radius: 5px;
 }
+
+.keyframes(@name,@rules){
+    @keyframes @name {
+        @rules();
+    }
+}
+
+.animate(@name, @dur, @delay){
+    animation-name: @name;
+    animation-duration: @dur;
+    animation-delay: @delay;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+
+
+}
+

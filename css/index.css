@@ -1,3 +1,43 @@
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -165,6 +205,10 @@ nav {
   background: #F6F6F6;
   color: #454A59;
   border: 1px solid #F1F1F1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
 }
 nav .logo {
   font-size: 4em;
@@ -204,6 +248,17 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.home {
+  margin-top: 100px;
+}
+.home .intro {
+  opacity: 0;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
 .home .intro h2 {
   padding: 15px;
 }
@@ -224,6 +279,26 @@ footer {
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+  opacity: 0;
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+.home .space-images img:first-child {
+  animation-name: slideRight;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+.home .space-images img:last-child {
+  animation-name: slideLeft;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
 }
 @media (max-width:500px) {
   .home .space-images img {
@@ -234,6 +309,12 @@ footer {
   }
 }
 .home .visit-planets {
+  opacity: 0;
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
   padding: 15px;
 }
 .home .visit-planets h3 {
@@ -243,6 +324,12 @@ footer {
   margin-top: 13px;
 }
 .home .walk {
+  opacity: 0;
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
   margin-top: 60px;
   border-top: 1px solid #dee2e6;
   padding: 50px 60px;

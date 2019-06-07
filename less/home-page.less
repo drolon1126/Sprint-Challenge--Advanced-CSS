@@ -1,8 +1,11 @@
 // Home Content
 
 .home {
+  margin-top: 100px;
 
   .intro {
+    opacity: 0;
+    .animate(slideDown,1s,0);
 
     h2 {
       padding: 15px;
@@ -24,11 +27,22 @@
     flex-wrap: wrap;
     width: 100%;
 
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      opacity: 0;
+      .animate(slideDown,1s,0.3s);
+
+      &:first-child{
+        .animate(slideRight,1s,0.3s);
+      }
+      &:last-child{
+        .animate(slideLeft,1s,0.3s);
+      }
 
       @media @phone{
         width: 90%;
@@ -41,6 +55,8 @@
   }
 
   .visit-planets {
+    opacity: 0;
+    .animate(slideUp,1s,0.5s);
     padding: 15px;
 
     h3 {
@@ -53,6 +69,8 @@
   }
 
   .walk {
+    opacity: 0;
+    .animate(slideUp,1s,0.5s);
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
