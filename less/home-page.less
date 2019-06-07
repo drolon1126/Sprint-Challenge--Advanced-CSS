@@ -11,6 +11,10 @@
     p {
       padding:0 15px;
     }
+
+    img{
+      border-radius: 5px;
+    }
   
   }
 
@@ -58,6 +62,10 @@
       }
 
       .btn {
+        .create-btn(29.5%,@btn-bg-color,@wild-sand);
+        &:hover{
+          .create-btn(29.5%,@wild-sand,@btn-bg-color);
+        }
       }
     }
 

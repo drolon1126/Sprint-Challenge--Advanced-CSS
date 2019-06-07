@@ -1,1 +1,18 @@
 // Mixins Here
+.flex-setup(@dir,@just,@align){
+    display: flex;
+    flex-direction: @dir;
+    justify-content: @just;
+    align-items: @align;
+}
+
+.create-btn(@width,@bkg,@txt){
+    width:@width;
+    padding: 0.87rem 0;
+    background: @bkg;
+    color: @txt;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+}

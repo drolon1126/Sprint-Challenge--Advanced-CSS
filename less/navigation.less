@@ -1,1 +1,30 @@
 // Navigation code here
+nav{
+    text-align: center;
+    background: @wild-sand;
+    color: @river-bend;
+    border: 1px solid @sea-shell;
+
+    .logo{
+        font-size: 4em;
+        margin-top: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .links{
+        .flex-setup(row,space-around,center);
+        width:21.4%;
+        margin: 1.1rem auto;
+        padding-top:0.4rem;
+        a{
+            font-size: 1.6em;
+            font-weight: 600;
+            color: @river-bend;
+            text-decoration: none;
+
+            &:hover{
+                color: lighten(@river-bend, 40%);
+            }
+        }
+    }
+}
