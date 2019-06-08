@@ -1,1 +1,51 @@
 // Navigation code here
+nav{
+    background: @wild-sand;
+    color: @river-bend;
+    border: 1px solid @sea-shell;
+    position:fixed;
+    top:0;
+    width:100%;
+    opacity: 0.9;
+    z-index: 1;
+
+    .logo{
+        margin: 0;
+        padding: 0;
+        font-size: 4em;
+        margin-top: 1.2rem;
+        margin-bottom: 1.5rem;
+        .flex-setup(row,center,center);
+        h1{
+            position: relative;
+            overflow: hidden;
+            color: @wild-sand;
+            background: linear-gradient(80deg, @wild-sand, @river-bend, @wild-sand);
+            background-repeat: no-repeat;
+            background-size: 80%;
+            animation: shineText 2s linear infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(0, 0, 0, 0);
+        }
+    }
+
+    .links{
+        .flex-setup(row,space-around,center);
+        width:21.4%;
+        margin: 1.1rem auto;
+        padding-top:0.4rem;
+        a{
+            font-size: 1.6em;
+            font-weight: 600;
+            color: @river-bend;
+            text-decoration: none;
+
+            &:hover{
+                color: lighten(@river-bend, 40%);
+            }
+        }
+        @media @phone{
+            width: 80%;
+        }
+    }
+}
